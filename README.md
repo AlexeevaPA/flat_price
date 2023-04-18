@@ -30,7 +30,7 @@ Moreover, in this project peak values were deleted and the classification based 
 
 In this case, the aim is to predict the future cost of houses, so the standard method of cross-validation doesn’t work. The training set for this model is based on the time serial split algorithm the smallest amount of splits is four because there are four years in the dataset. 
 
-![Illustration of timeSeriasSplit method for cross-validation](https://user-images.githubusercontent.com/104028421/232857077-b9a34b9a-1cfd-4a69-afc1-0943cf167633.png)
+![Illustration of timeSeriasSplit method for cross-validation](https://user-images.githubusercontent.com/104028421/232858510-07355817-12d4-4707-8a6a-016e7485daf8.png)
 
 
 Moreover, to overcome overfitting and improve model the regularization and scaling were added. In this project, Losso regularization was used. Data scaling was implemented only on training data
