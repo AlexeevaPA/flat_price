@@ -35,4 +35,4 @@ In this case, the aim is to predict the future cost of houses, so the standard m
 
 Moreover, to overcome overfitting and improve model the regularization and scaling were added. In this project, Losso regularization was used. Data scaling was implemented only on training data
 
-As it was mentioned before, the segmentation of data based on primary and secondary housing was used. That is why there are two extra models for each case, in addition to the model for the whole dataset.
+As it was mentioned before, the segmentation of data based on primary and secondary housing was used. That is why there are two extra models for each case.
