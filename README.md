@@ -7,7 +7,7 @@ The original dataset is from kaggle.com, it contains information about houses’
 
 **Processing data**
 
-The task was to build a model which provides the least RMSLE error. The behavior of RMSLE error is close to MSLE error in this case, that is why in this project MSLE error was estimated.
+The task was to build a recommendation model for estimating houses' price in the future which provides the least RMSLE error. The behavior of RMSLE error is close to MSLE error, that is why in this project MSLE error was estimated.
 
 For simplifying the metric analysis not just the houses’ price was used, but its logarithm.
 In original data, there are three types of features: qualitative, quantitative and absent data (None). That is why at the beginning the data processing was made.
