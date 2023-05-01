@@ -24,6 +24,27 @@ Firstly, quantitative None values were replaced with the mean value of the featu
 
 There are a lot of methods for transforming qualitative data into quantitative, but I used just One-Hot-Encoding (OHE) and Mean-Target-Encoding (MTE) because they illustrated quite a good error at the end.
 
+In this dataset there are 16 qualitative features without null data:
+
+|№ | Column                   |Count| Non-Null  | Type |
+|--- | ------                   |  ------|--------|  ----- | 
+| 0  | timestamp                |  30471 |non-null|  object|
+| 1  | product_type             |  30471 |non-null|  object|
+| 2  | sub_area                 |  30471 |non-null|  object|
+| 3  | culture_objects_top_25   |  30471 |non-null|  object|
+| 4  | thermal_power_plant_raion|  30471 |non-null|  object|
+| 5  | incineration_raion       |  30471 |non-null|  object|
+| 6  | oil_chemistry_raion      |  30471 |non-null|  object|
+| 7  | radiation_raion          |  30471 |non-null|  object|
+| 8  | railroad_terminal_raion  |  30471 |non-null|  object|
+| 9  | big_market_raion         |  30471 |non-null|  object|
+| 10 | nuclear_reactor_raion    |  30471 |non-null|  object|
+| 11 | detention_facility_raion |  30471 |non-null|  object|
+| 12 | water_1line              |  30471 |non-null|  object|
+| 13 | big_road1_1line          |  30471 |non-null|  object|
+| 14 | railroad_1line           |  30471 |non-null|  object|
+| 15 | ecology                  |  30471 |non-null|  object|
+
 All qualitative data, except "datatime" property, were modified to quantitative data using OHE method if there are fewer than five unique features, and MTE method if there are more of them. The “datatime” property was divided by day, month, and year, and after that month and year features were modified using OHE method, days were deleted because days’ alteration doesn’t affect price significantly.
 
 *Extra processing*
@@ -34,8 +55,14 @@ Moreover, in this project peak values were deleted and the classification based 
 
 In this case, the aim is to predict the future cost of houses, so the standard method of cross-validation doesn’t work. The training set for this model is based on the time serial split algorithm the smallest amount of splits is four because there are four years in the dataset. 
 
-![Illustration of timeSeriasSplit method for cross-validation](https://user-images.githubusercontent.com/104028421/232858510-07355817-12d4-4707-8a6a-016e7485daf8.png)
+![Illustration of timeSeriasSplit method for cross-validation](https://user-images.githubusercontent.com/104028421/235493816-3cda28ca-8273-4fe5-a80f-866418ffa920.png)
 
 Linear regression was used as the main model. Moreover, to overcome overfitting and improve model the regularization and scaling were added. In this project, Losso regularization was used. Data scaling was implemented only on training data.
 
 As it was mentioned before, the segmentation of data based on primary and secondary housing was used. That is why there are two extra models for each case.
+
+The final errors on test and train datasets are:
+
+|Train | Test |
+|--- | ------ | 
+| 0.154  | 0.16|         
