@@ -1,4 +1,8 @@
 # flat_price
+![](https://user-images.githubusercontent.com/104028421/235492616-2c389022-ef60-45ef-a0e1-d5e3b8108aba.jpg)
+
+
+
 **Overview**
 
 **Data**
@@ -32,7 +36,6 @@ In this case, the aim is to predict the future cost of houses, so the standard m
 
 ![Illustration of timeSeriasSplit method for cross-validation](https://user-images.githubusercontent.com/104028421/232858510-07355817-12d4-4707-8a6a-016e7485daf8.png)
 
-
-Moreover, to overcome overfitting and improve model the regularization and scaling were added. In this project, Losso regularization was used. Data scaling was implemented only on training data
+Linear regression was used as the main model. Moreover, to overcome overfitting and improve model the regularization and scaling were added. In this project, Losso regularization was used. Data scaling was implemented only on training data.
 
 As it was mentioned before, the segmentation of data based on primary and secondary housing was used. That is why there are two extra models for each case.
