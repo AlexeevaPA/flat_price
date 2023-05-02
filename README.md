@@ -65,4 +65,4 @@ The final errors on test and train datasets are:
 
 |Train | Test |
 |--- | ------ | 
-| 0.154  | 0.16|         
+| 0.160  | 0.164|         
